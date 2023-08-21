@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Truco</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="Placar de truco">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icon-256.png">
+    <link rel="apple-touch-icon" href="images/icon-256.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div>
+        <h2>Pontuador de Truco</h2>
+        <form id="form" onsubmit="return false;">
+            <input id="equipe1" type="text" placeholder="Equipe 1">
+            <input id="equipe2" type="text" placeholder="Equipe 2">
+            <button onclick="comecar()">Começar Jogo</button>
+        </form>
+    </div>
+    <div id="partida" style="display: none;">
+        <div>
+            <h2 id="equipe1h2">Equipe 1</h2>
+            <h2><span id="pontos1"></span> pontos</h2>
+            <button onclick="pontua1(1)">1 Ponto</button>
+            <button onclick="pontua1(3)">3 Ponto</button>
+            <button onclick="pontua1(6)">6 Ponto</button>
+            <button onclick="pontua1(12)">12 Ponto</button>
+        </div>
+        <div>
+            <h2 id="equipe2h2">Equipe 2</h2>
+            <h2><span id="pontos2"></span> pontos</h2>
+            <button onclick="pontua2(1)">1 Ponto</button>
+            <button onclick="pontua2(3)">3 Ponto</button>
+            <button onclick="pontua2(6)">6 Ponto</button>
+            <button onclick="pontua2(12)">12 Ponto</button>
+        </div>
+        <div>
+            <h2>Vitórias 1:</h2><h2 id="vitorias1">0</h2>
+            <h2>Vitórias 2:</h2><h2 id="vitorias2">0</h2>
+            <button onclick="recomecar()">Parar Jogo</button>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
